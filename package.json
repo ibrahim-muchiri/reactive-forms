@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "storybook": "ng run my-angular-app:storybook",
+    "build-storybook": "ng run my-angular-app:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +20,13 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@taiga-ui/cdk": "^4.12.0",
+    "@taiga-ui/core": "^4.12.0",
+    "@taiga-ui/event-plugins": "^4.0.2",
+    "@taiga-ui/icons": "^4.12.0",
+    "@taiga-ui/kit": "^4.12.0",
+    "@taiga-ui/legacy": "^4.12.0",
+    "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
@@ -26,6 +35,14 @@
     "@angular-devkit/build-angular": "^18.2.10",
     "@angular/cli": "^18.2.10",
     "@angular/compiler-cli": "^18.2.0",
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.6",
+    "@storybook/addon-interactions": "^8.3.6",
+    "@storybook/addon-links": "^8.3.6",
+    "@storybook/addon-onboarding": "^8.3.6",
+    "@storybook/angular": "^8.3.6",
+    "@storybook/blocks": "^8.3.6",
+    "@storybook/test": "^8.3.6",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
@@ -33,6 +50,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "storybook": "^8.3.6",
     "typescript": "~5.5.2"
   }
 }
