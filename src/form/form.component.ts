@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -11,11 +11,16 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angul
 })
 export class FormComponent implements OnInit {
   regestrationForm!: FormGroup
+
+  get userName() {
+    return this.regestrationForm.get('userName');
+  }
+
   constructor(private fb: FormBuilder){}
 
   ngOnInit(): void {
     this.regestrationForm = this.fb.group({
-      userName: ['John'],
+      userName: ['', [Validators.required, Validators.minLength(3)]],
       password: [''],
       confirmPassword: [''],
       address: this.fb.group({
